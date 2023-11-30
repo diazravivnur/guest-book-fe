@@ -14,8 +14,8 @@ export default function BasicTable() {
 
     React.useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('http://localhost:5000/api/wedding/v1/guests-attends');
-            setData(response.data.data);
+            const response = await axios.get('https://teduh.my.id/api/wedding/v1/guests-attends');
+            setData(response.data.data.userAttend);
         };
 
         fetchData();
